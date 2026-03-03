@@ -63,13 +63,15 @@ function Hero() {
                         </div>
 
                         <p className="hero__description">
-                            Desenvolvedora Full Stack Jr. com foco em JavaScript, React, Node.js e APIs REST, construindo interfaces 
+                            Desenvolvedora Full Stack Jr. com foco em JavaScript, React, Node.js e APIs REST, construindo interfaces
                             responsivas e aplicações web bem estruturadas, com atenção à usabilidade, performance e qualidade de código.
                         </p>
 
                         <div className="hero__actions">
-                            <a href="#projects" className="button button--primary">
-                                Ver projetos
+                            <a href="./cv-samara-melo.pdf"
+                                download="cv-samara-melo.pdf"
+                                className="button button--primary">
+                                Baixar CV
                             </a>
                             <a href="#contact" className="button button--ghost">
                                 Entrar em contato
