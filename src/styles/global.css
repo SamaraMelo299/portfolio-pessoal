@@ -1,0 +1,235 @@
+/* global.css */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-base);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--bg-gradient);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+::selection {
+    background: rgba(132, 14, 201, 0.35);
+    color: #fff;
+}
+
+.container {
+    width: min(100%, var(--container-width));
+    margin: 0 auto;
+    padding-inline: var(--container-padding);
+}
+
+main {
+    overflow: clip;
+}
+
+section[id] {
+    scroll-margin-top: calc(var(--header-h) + 18px);
+}
+
+.section {
+    padding: 96px 0 72px;
+}
+
+.section--panel .panel {
+    background: var(--panel-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xl);
+    padding: 64px 56px;
+    box-shadow: var(--shadow-lg);
+}
+
+.section-head {
+    margin-bottom: 28px;
+}
+
+.section-head h2 {
+    font-size: var(--fs-h2);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+}
+
+.section-head p {
+    color: var(--text-muted);
+    max-width: 680px;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.text-soft {
+    color: var(--text-soft);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--card-gradient);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(132, 14, 201, 0.45);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: var(--radius-pill);
+    font-weight: 500;
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.button--primary {
+    border: 1px solid rgba(132, 14, 201, 0.95);
+    background: rgba(132, 14, 201, 0.1);
+    box-shadow: 0 0 22px rgba(132, 14, 201, 0.18);
+}
+
+.button--primary:hover {
+    background: rgba(132, 14, 201, 0.16);
+    transform: translateY(-1px);
+}
+
+.button--ghost {
+    border: 1px solid var(--stroke);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.button--ghost:hover {
+    border-color: rgba(132, 14, 201, 0.45);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.link-accent {
+    color: var(--accent);
+    transition: opacity var(--transition-fast);
+}
+
+.link-accent:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 980px) {
+    .section {
+        padding: 80px 0 60px;
+    }
+
+    .section--panel .panel {
+        padding: 42px 28px;
+        border-radius: var(--radius-lg);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding-inline: 18px;
+    }
+
+    .section {
+        padding: 64px 0 48px;
+    }
+
+    .section-head {
+        margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+        font-size: 28px;
+    }
+
+    .section--panel .panel {
+        padding: 28px 18px;
+        border-radius: 20px;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --header-h: 92px;
+    }
+
+    .section-head h2 {
+        font-size: 25px;
+    }
+}

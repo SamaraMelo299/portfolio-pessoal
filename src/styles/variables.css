@@ -1,0 +1,78 @@
+/* variables.css */
+:root {
+    /* cores principais */
+    --accent: #840ec9;
+    --accent-strong: #9d2cff;
+    --accent-soft: rgba(132, 14, 201, 0.18);
+
+    --bg: #141414;
+    --bg-secondary: #121212;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-strong: rgba(255, 255, 255, 0.06);
+
+    --text: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.8);
+    --text-soft: rgba(255, 255, 255, 0.62);
+
+    --stroke: rgba(255, 255, 255, 0.1);
+    --stroke-strong: rgba(255, 255, 255, 0.14);
+
+    /* sombras */
+    --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 18px 60px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.5);
+    --shadow-accent: 0 14px 40px rgba(132, 14, 201, 0.18);
+
+    /* gradientes */
+    --bg-gradient:
+        radial-gradient(900px 520px at 18% 18%, rgba(132, 14, 201, 0.22), transparent 60%),
+        radial-gradient(900px 520px at 86% 26%, rgba(132, 14, 201, 0.14), transparent 60%),
+        linear-gradient(180deg, #141414 0%, #121212 100%);
+
+    --card-gradient: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.04));
+
+    --panel-gradient: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.02));
+
+    /* layout */
+    --container-width: 1120px;
+    --container-padding: clamp(16px, 4vw, 40px);
+    --header-h: 88px;
+
+    /* radius */
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 24px;
+    --radius-xl: 28px;
+    --radius-pill: 999px;
+
+    /* espaçamentos */
+    --space-1: 8px;
+    --space-2: 12px;
+    --space-3: 16px;
+    --space-4: 20px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 40px;
+    --space-8: 48px;
+    --space-9: 64px;
+    --space-10: 80px;
+
+    /* tipografia */
+    --font-base: "Poppins", sans-serif;
+    --fs-body: 16px;
+    --fs-small: 14px;
+    --fs-h1: clamp(2.4rem, 5vw, 4rem);
+    --fs-h2: clamp(1.8rem, 3vw, 2.25rem);
+    --fs-h3: 1.125rem;
+
+    --lh-body: 1.6;
+    --lh-tight: 1.08;
+
+    /* transições */
+    --transition-fast: 0.2s ease;
+    --transition: 0.25s ease;
+}
