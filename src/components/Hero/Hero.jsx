@@ -68,11 +68,16 @@ function Hero() {
                         </p>
 
                         <div className="hero__actions">
-                            <a href="./cv-samara-melo.pdf"
+                            <a
+                                href={`${import.meta.env.BASE_URL}cv-samara-melo.pdf`}
                                 download="cv-samara-melo.pdf"
-                                className="button button--primary">
+                                className="button button--primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 Baixar CV
                             </a>
+
                             <a href="#contact" className="button button--ghost">
                                 Entrar em contato
                             </a>
@@ -90,7 +95,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 
